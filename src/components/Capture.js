@@ -5,38 +5,38 @@ import Webcam from "react-webcam";
 // width = 1280;
 var images = new Array;
 
-const videoConstraints = {
-  width: '50%',
-  height: '50%',
-  facingMode: "facing-out"
-};
+// const videoConstraints = {
+//   width: '50%',
+//   height: '50%',
+//   facingMode: "facing-out"
+// };
  
-const WebcamCapture = () => {
-  const webcamRef = React.useRef(null);
+// const WebcamCapture = () => {
+//   const webcamRef = React.useRef(null);
  
-  const capture = React.useCallback(
-    () => {
-      const imageSrc = webcamRef.current.getScreenshot();
-      images.push(imageSrc);
-      console.log(images.length)
-    },
-    [webcamRef]
-  );
+//   const capture = React.useCallback(
+//     () => {
+//       const imageSrc = webcamRef.current.getScreenshot();
+//       images.push(imageSrc);
+//       console.log(images.length)
+//     },
+//     [webcamRef]
+//   );
  
-  return (
-    <>
-      <Webcam
-        audio={false}
-        height={'50%'}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        width={'50%'}
-        videoConstraints={videoConstraints}
-      />
-      <button onClick={capture}>Capture photo</button>
-    </>
-  );
-};
+//   return (
+//     <>
+//       <Webcam
+//         audio={false}
+//         height={'50%'}
+//         ref={webcamRef}
+//         screenshotFormat="image/jpeg"
+//         width={'50%'}
+//         videoConstraints={videoConstraints}
+//       />
+//       <button onClick={capture}>Capture photo</button>
+//     </>
+//   );
+// };
 
 // const videoConstraints = {
 //     width: 1280,
@@ -70,45 +70,50 @@ const WebcamCapture = () => {
 //     );
 //   };
 
-//###################################################
+// ###################################################
 
-// const WebcamCapture = () => {
-//   const [deviceId, setDeviceId] = React.useState({});
-//   const [devices, setDevices] = React.useState([]);
+const WebcamCapture = () => {
+  const [deviceId, setDeviceId] = React.useState({});
+  const [devices, setDevices] = React.useState([]);
 
  
 
-//   const handleDevices = React.useCallback(
-//     mediaDevices =>
-//       setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
-//     [setDevices]
-//   );
+  const handleDevices = React.useCallback(
+    mediaDevices =>
+      setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
+    [setDevices]
+  );
 
-//   React.useEffect(
-//     () => {
-//       navigator.mediaDevices.enumerateDevices().then(handleDevices);
-//     },
-//     [handleDevices]
-//   );
+  React.useEffect(
+    () => {
+      navigator.mediaDevices.enumerateDevices().then(handleDevices);
+    },
+    [handleDevices]
+  );
 
-//   for (var device in devices){
-//     console.log(devices[device])
-//   }
+  // for (var device in devices){
+  //   console.log(devices[device])
+  // }
    
 
-//   return (
-//     <>
-//       {devices.map((device, key) => (
-//           <div>
-//             <Webcam audio={false} videoConstraints={{ deviceId: device.deviceId }} />
-//             {device.label || `Device ${key + 1}`}   
-//             {/* <button onClick={capture}>Capture photo</button> */}
-//           </div>
+  return (
+    <>
+      {
+      devices.map((device, key) => {
+        if (key === 1){
+        return(
+          <div>
+            <Webcam audio={false} videoConstraints={{ deviceId: device.deviceId }} />
+            {/* {device.label || `Device ${key + 1}`}    */}
+            {/* <button onClick={capture}>Capture photo</button> */}
+          </div>
 
-//         ))}
-//     </>
-//   );
-// };
+        )}}
+        )
+        }
+    </>
+  );
+};
 
 
 //###################################################
