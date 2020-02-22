@@ -12,7 +12,7 @@ import List from './list/List'
 import NotFound from './error/404'
 import Header from './header/Header'
 import './../styles/App.css';
-import Capture from './Capture'
+import WebcamCapture from './Capture'
 
 import Webcam from "react-webcam";
 
@@ -21,7 +21,7 @@ import Webcam from "react-webcam";
 function App() {
   return (
     <header className="App-header">
-      <Capture></Capture>
+      <WebcamCapture></WebcamCapture>
     </header>
   );
 }
