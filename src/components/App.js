@@ -21,7 +21,7 @@ import Webcam from "react-webcam";
 function App() {
   return (
     <header className="App-header">
-      <WebcamCapture></WebcamCapture>
+      <WebcamCapture ></WebcamCapture>
     </header>
   );
 }
