@@ -20,16 +20,9 @@ import Webcam from "react-webcam";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Router>
-        <Switch>
-          <Route exact path="/" component={List}></Route>
-          <Route component={NotFound}></Route>
-        </Switch>
-      </Router>
-    </div>
-
+    <header className="App-header">
+      <Capture></Capture>
+    </header>
   );
 }
 
