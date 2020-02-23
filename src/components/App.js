@@ -1,26 +1,14 @@
-import React, { Component } from 'react';
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  Redirect
-} from 'react-router-dom'
-
-import List from './list/List'
-import NotFound from './error/404'
-import Header from './header/Header'
+import React from 'react';
 import './../styles/App.css';
-import Camera from './Camera'
+// import MapBox from './maps/mapBox';
+import AddPlace from './addPlace/add';
 
-import Webcam from "react-webcam";
 
 function App() {
   return (
-    <header className="App-header">
-      <Camera></Camera>
-    </header>
+    <div>
+      <AddPlace/>
+    </div>
   );
 }
 
