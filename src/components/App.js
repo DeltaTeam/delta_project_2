@@ -10,7 +10,10 @@ import {
 import List from './list/List'
 import NotFound from './error/404'
 import Header from './header/Header'
+
 import './../styles/App.css';
+// import MapBox from './maps/mapBox';
+import AddPlace from './addPlace/add';
 
 
 function App() {
@@ -23,8 +26,10 @@ function App() {
           <Route component={NotFound}></Route>
         </Switch>
       </Router>
-    </div>
 
+//     <div>
+//       <AddPlace/>
+//     </div>
   );
 }
 
