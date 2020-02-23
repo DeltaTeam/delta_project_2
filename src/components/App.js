@@ -12,15 +12,9 @@ import List from './list/List'
 import NotFound from './error/404'
 import Header from './header/Header'
 import './../styles/App.css';
-// import WebcamCapture from './Capture'
 import Camera from './Camera'
 
 import Webcam from "react-webcam";
-
-// var printImages = (imgs) => {
-//   console.log(imgs.map(img => img))
-// }
-
 
 function App() {
   return (
