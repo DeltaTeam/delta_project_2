@@ -11,7 +11,8 @@ class List extends Component {
     super(props);
     this.state = {
       data: new Array(),
-      chosed: false
+      chosed: false,
+      index: -1
     };
     getData(this.setData.bind(this))
   }
@@ -19,9 +20,11 @@ class List extends Component {
   cleanData() {
     this.setState({
       data: new Array(),
-      chosed: false
+      chosed: false,
+      index: -1
     })
   }
+
 
   chosedItem() {
     this.setState({
@@ -40,12 +43,13 @@ class List extends Component {
     return (
       <div>
         {
-          this.state.data.map((value) => {
+          this.state.data.map((value, index) => {
             return (
-              <ListShortcut
-                data={value}
+              <ListShortcut key={index.toString()}
+                data={this.state.data[index]}
                 flag={this.state.chosed}
-                choose={this.chosedItem.bind(this)}
+                choose={this.chosedItem.bind(this)
+                } index={index}
               />
             )
           })

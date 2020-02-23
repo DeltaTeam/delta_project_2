@@ -6,8 +6,8 @@ var images = new Array;
 
 const videoConstraints = {
 
-  // facingMode:  { exact: "environment" }
-  facingMode: 'user'
+  facingMode: { exact: "environment" }
+  // facingMode: 'user'
 };
 
 const buttonStyle = {
@@ -28,7 +28,7 @@ const WebcamCapture = (props) => {
     },
     [webcamRef]
   );
-    
+
   return (
     <>
       <Webcam
@@ -37,13 +37,13 @@ const WebcamCapture = (props) => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         width={'100%'}
-        marginTop = {'0px'}
-        marginLeft = {'auto'}
-        marginRight = {'auto'}
+        marginTop={'0px'}
+        marginLeft={'auto'}
+        marginRight={'auto'}
         videoConstraints={videoConstraints}
       />
-      <Button variant="contained" color="#209bed" style = {buttonStyle} onClick={capture}>
-      Зробити фото
+      <Button variant="contained" color="#209bed" style={buttonStyle} onClick={capture}>
+        Зробити фото
         </Button>
     </>
   );

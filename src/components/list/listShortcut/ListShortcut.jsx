@@ -4,7 +4,6 @@ import "./../../../styles/list/listShortcut.css";
 import ListItem from "./../ListItem.js";
 
 function ListShortcut(props) {
-  console.log(props.data);
   if (props.flag) {
     return <ListItem data={props.data} />;
   } else {

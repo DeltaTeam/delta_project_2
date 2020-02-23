@@ -28,7 +28,8 @@ function ListItemMob(props) {
         <div className="listItemMob listItemMobBox">
           <p>Дата: {props.data.date}</p>
           <button onClick={props.choseSlider}>Slider button</button>
-          <Map place={props.data.place}></Map>
+          {/* <Map place={props.data.place}></Map> */}
+          <p>Loading map</p>
           <p>Номер машини: AA 1111 AA</p>
           <button onClick={props.choseComment}>Comment</button>
         </div>

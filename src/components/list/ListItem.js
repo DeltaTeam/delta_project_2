@@ -38,6 +38,7 @@ class ListItem extends Component {
   }
 
   render() {
+    console.log(this.props.data)
     return (
       <div>
         <ListItemMob

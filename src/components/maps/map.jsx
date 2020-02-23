@@ -10,7 +10,6 @@ export class MapContainer extends Component {
   }
 
   render() {
-    console.log(this.state.markerPosition.markerPosition.lat);
     return (
       <Map
         // style = {containerStyle}
