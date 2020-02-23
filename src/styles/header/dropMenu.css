@@ -1,0 +1,11 @@
+.dropMenu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .dropMenu {
+    display: grid;
+    justify-items: start;
+    padding-left: 10px;
+  }
+}

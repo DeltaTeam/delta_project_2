@@ -1,0 +1,45 @@
+.listShortcut {
+  display: grid;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  width: 70%;
+  grid-template-columns: 50% 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid;
+  border-radius: 5px;
+  border-width: thin;
+}
+
+.listShortcut:hover {
+  background-color: #209bed;
+}
+
+@media (max-width: 750px) {
+  .listShortcut {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .listShortcut {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    width: 80%;
+    grid-template-columns: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-radius: 5px;
+    border-width: thin;
+  }
+}
