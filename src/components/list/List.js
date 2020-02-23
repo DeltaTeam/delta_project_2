@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 // import ListItem from "./ListItem";
 import ListShortcut from "./listShortcut/ListShortcut";
+import getData from "./../get"
 
 const testData = [{ date: '2020-02-02', comment: 'OlalaPapapa', place: 'Vin', files: `[JSON.stringify(newImgs)]` }]
 
@@ -9,9 +10,10 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: new Array(testData),
+      data: new Array(),
       chosed: false
     };
+    getData(this.setData.bind(this))
   }
 
   cleanData() {
@@ -28,8 +30,9 @@ class List extends Component {
   }
 
   setData(newData) {
+    let res = JSON.parse(newData)
     this.setState({
-      data: newData
+      data: res
     })
   }
 
@@ -42,7 +45,8 @@ class List extends Component {
               <ListShortcut
                 data={value}
                 flag={this.state.chosed}
-                choose={this.chosedItem.bind(this)} />
+                choose={this.chosedItem.bind(this)}
+              />
             )
           })
         }

@@ -3,10 +3,10 @@ import Capture from './Capture';
 import sendData from './send';
 import getData from './get';
 
-class Camera extends React.Component{
-    constructor(props){
+class Camera extends React.Component {
+    constructor(props) {
         super(props);
-        this.state ={
+        this.state = {
             imgs: new Array()
         }
     }
@@ -18,9 +18,10 @@ class Camera extends React.Component{
         this.setState({
             imgs: newImgs
         })
+        this.props.setImgData(newImgs)
     }
-    render(){
-        return(<Capture sentImg = {this.setImgs}/>)
+    render() {
+        return (<Capture sentImg={this.setImgs} />)
     }
 }
 

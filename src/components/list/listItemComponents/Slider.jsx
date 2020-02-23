@@ -20,7 +20,6 @@ const properties = {
 
 const Slideshow = (props) => {
   const photos = [`https://modgames.net/_ld/77/62956552.jpg`];
-  console.log(props.file[0]);
   return (
     <div className="bigSliderContainer">
       <div className="slide-container">

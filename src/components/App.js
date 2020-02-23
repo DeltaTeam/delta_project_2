@@ -23,13 +23,11 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={List}></Route>
+          <Route exact path="/add_crime" component={AddPlace}></Route>
           <Route component={NotFound}></Route>
         </Switch>
       </Router>
-
-//     <div>
-//       <AddPlace/>
-//     </div>
+    </div>
   );
 }
 

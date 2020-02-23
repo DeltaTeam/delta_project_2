@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Slider from "./Slider";
 import "./../../../styles/list/listItem.css";
+import Map from "./../../maps/mapBox";
 
 function ListItemMob(props) {
   if (props.slider) {
@@ -9,11 +10,11 @@ function ListItemMob(props) {
       <div className="listItemMobBox">
         <div>
           <div className="listItemMob">
-            <p>Дата: {props.data[0].date}</p>
+            <p>Дата: {props.data.date}</p>
           </div>
         </div>
 
-        <Slider file={props.data[0].files} />
+        <Slider file={props.data.files} />
         <div className="listItemMob">
           <button onClick={props.choseLocation}>Location</button>
           <p>Номер машини: AA 1111 AA</p>
@@ -23,12 +24,11 @@ function ListItemMob(props) {
     );
   } else {
     if (props.location) {
-      console.log(props.data[0]);
       return (
         <div className="listItemMob listItemMobBox">
-          <p>Дата: {props.data[0].date}</p>
+          <p>Дата: {props.data.date}</p>
           <button onClick={props.choseSlider}>Slider button</button>
-          <p>Load location</p>
+          <Map place={props.data.place}></Map>
           <p>Номер машини: AA 1111 AA</p>
           <button onClick={props.choseComment}>Comment</button>
         </div>
@@ -36,11 +36,11 @@ function ListItemMob(props) {
     } else {
       return (
         <div className="listItemMob listItemMobBox">
-          <p>Дата:{props.data[0].date}</p>
+          <p>Дата:{props.data.date}</p>
           <button onClick={props.choseSlider}>Slider button</button>
           <p>Номер машини: AA 1111 AA</p>
           <button onClick={props.choseLocation}>Location</button>
-          <p>Comment: {props.data[0].comment}</p>
+          <p>Comment: {props.data.comment}</p>
         </div>
       );
     }
