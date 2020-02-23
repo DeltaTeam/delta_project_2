@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import Webcam from "react-webcam";
-
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 var images = new Array;
 
 const videoConstraints = {
-  width: '50%',
-  height: '50%',
+
   // facingMode:  { exact: "environment" }
   facingMode: 'user'
 };
+
+const buttonStyle = {
+  width: '100%',
+  background: '#209bed',
+  color: 'white'
+};
+
 
 const WebcamCapture = (props) => {
   const webcamRef = React.useRef(null);
@@ -26,13 +33,18 @@ const WebcamCapture = (props) => {
     <>
       <Webcam
         audio={false}
-        height={'50%'}
+        height={'100%'}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        width={'50%'}
+        width={'100%'}
+        marginTop = {'0px'}
+        marginLeft = {'auto'}
+        marginRight = {'auto'}
         videoConstraints={videoConstraints}
       />
-      <button onClick={capture}>Зробити фото</button>
+      <Button variant="contained" color="#209bed" style = {buttonStyle} onClick={capture}>
+      Зробити фото
+        </Button>
     </>
   );
 };

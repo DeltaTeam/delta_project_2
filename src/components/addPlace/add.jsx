@@ -10,6 +10,7 @@ import {
   DateTimePicker,
   MuiPickersUtilsProvider,
 } from '@material-ui/pickers';
+import Camera from '../Camera';
 
 const styledField = {
     width: '100%',
@@ -87,6 +88,10 @@ export default class AddPlace extends Component{
                         <Comment name = 'Comment' onChange = {this.handleChange} placeholder = '' onChange = {this.handleChange}/>
                         <CostumedButton onSubmit = {this.handleSubmit} />
                     </div>       
+                    <div className = 'Camera'
+                    >
+                        <Camera/>
+                    </div>
                 </form>
             </div>
         )

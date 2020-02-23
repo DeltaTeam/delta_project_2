@@ -56,4 +56,24 @@
         width: 93%;
         margin-left: 3.5%;
     }
+    .Camera{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 1050px;
+    }
+
 }
+
+@media (min-width: 1000px) { 
+    .Camera{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width:800px;
+        margin-top: 550px;
+    }
+}
+
