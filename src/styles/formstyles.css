@@ -1,0 +1,59 @@
+.block{
+    display: block;
+}
+
+.marginCenter{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formBlock{
+    width: 1000px;
+
+}
+
+.inline{
+    float: left;
+    display: inline-block;
+}
+
+.rightBox{
+    width: 35%;
+    margin-left: 62%;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.Field{
+    margin: 10px;
+}
+
+.leftBox{
+    position: absolute;
+    height: 500px;
+    width: 60%;
+    margin: 17px;
+}
+
+.rightBox{
+    position: absolute;
+    width: 37%;
+    margin-top: 10px;
+    margin-left: 62%;
+}
+
+@media (max-width: 1000px) { 
+    .rightBox{
+        position: absolute;
+        margin-top: 520px;
+        width: 93%;
+        margin-left: 3.5%;
+
+    }
+    .leftBox{
+        position: absolute;
+        height: 500px;
+        width: 93%;
+        margin-left: 3.5%;
+    }
+}
