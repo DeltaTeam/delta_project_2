@@ -1,7 +1,10 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+
+import "../../styles/colors.css";
+import "../../styles/header/header.css";
+import "../../styles/header/logo.css";
+import FullMenu from "./FullMenu";
+import DropMenu from "./DropMenu";
 
 function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -15,25 +18,13 @@ function Header() {
   };
 
   return (
-    <div>
-      <Button
-        aria-controls="simple-menu"
-        aria-haspopup="true"
-        onClick={handleClick}
-      >
-        Open Menu
-      </Button>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
+    <div className="blueColor header">
+      <FullMenu />
+      <DropMenu />
+      <img
+        src="https://mvs.gov.ua/upload/image/simvol_logo_mvs.png"
+        className="logo"
+      ></img>
     </div>
   );
 }

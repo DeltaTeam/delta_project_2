@@ -1,0 +1,63 @@
+.listItemMobBox {
+  display: none;
+}
+.listItemCompBox {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.listItemComp {
+  display: grid;
+  margin-top: 5px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.listItemCompFirstBlock {
+  display: grid;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 50% 50%;
+}
+
+button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #209bed;
+  border: solid;
+  border-radius: 5px;
+  border-width: thin;
+}
+
+.listItemCompComment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+p {
+  margin: 5px;
+}
+
+@media (max-width: 720px) {
+  .listItemCompBox {
+    display: none;
+  }
+  .listItemMobBox {
+    display: block;
+  }
+  .listItemMob {
+    display: grid;
+    margin-top: 5px;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 80%;
+  }
+}

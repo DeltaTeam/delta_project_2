@@ -1,0 +1,42 @@
+.fullMenu {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #cbd6e4;
+  font-size: 24px;
+}
+
+@media (max-width: 1280px) {
+  .fullMenu {
+    font-size: 18px;
+  }
+  a:hover {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 940px) {
+  .fullMenu {
+    font-size: 18px;
+  }
+  a:hover {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .fullMenu {
+    display: none;
+  }
+}
